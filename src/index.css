@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  min-height: 100vh;
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: rgba(37, 50, 66, 255);
 }
