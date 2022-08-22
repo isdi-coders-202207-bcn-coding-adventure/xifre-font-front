@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/oxanium": "^4.5.8",
     "@fontsource/rajdhani": "^4.5.9",
     "@fontsource/roboto": "^4.5.8",
     "@reduxjs/toolkit": "^1.8.4",

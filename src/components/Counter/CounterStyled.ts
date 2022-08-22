@@ -9,6 +9,7 @@ const CounterStyled = styled.ul`
   padding: 0;
   margin: 0;
   color: #c5d4db;
+  font-family: oxanium, sans-serif;
 
   & .counter {
     &-item {
@@ -26,7 +27,6 @@ const CounterStyled = styled.ul`
       background-color: rgba(255, 198, 1, 255);
       color: rgba(37, 50, 66, 255);
       font-size: 2.8rem;
-      font-family: rajdhani, sans-serif;
       width: 7rem;
       height: 7rem;
       font-weight: bold;
