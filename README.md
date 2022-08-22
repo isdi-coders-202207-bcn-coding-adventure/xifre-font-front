@@ -2,4 +2,4 @@ CODING ADVENTURE
 
 1. ¿Cuándo tengo que usar useCallback()?
 
-Cuando necesite memoizar una función, esto es, guarda el valor resuelto por la función y solo lo recalcula cuando cambia el array de dependencias (del propio useCallback). Así ahorramos realizar cálculos pesados varias veces. Es como useRef() pero sirve para almacenar una función callback entera, y no solo un valor.
+Cuando quiera devolver una versión memoizada de una función callback, que se le habrá pasado como argumento, para que cambie solo cuando cambie una de las dependencias del array de dependencias. El useCallback nos devolverá la misma función cada vez que se renderice el component, a menos que cambie una de las dependencias indicadas.
