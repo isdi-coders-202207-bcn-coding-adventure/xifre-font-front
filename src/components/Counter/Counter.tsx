@@ -1,5 +1,7 @@
+import CounterStyled from "./CounterStyled";
+
 const Counter = (): JSX.Element => (
-  <ul className="counter">
+  <CounterStyled>
     <li className="counter-item">
       <span className="counter-item__days">02</span>
       <span className="counter-item__data">days</span>
@@ -16,7 +18,7 @@ const Counter = (): JSX.Element => (
       <span className="counter-item__seconds">09</span>
       <span className="counter-item__data">seconds</span>
     </li>
-  </ul>
+  </CounterStyled>
 );
 
 export default Counter;
