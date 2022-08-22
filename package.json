@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@fontsource/oxanium": "^4.5.8",
-    "@fontsource/rajdhani": "^4.5.9",
     "@fontsource/roboto": "^4.5.8",
     "@reduxjs/toolkit": "^1.8.4",
     "@testing-library/jest-dom": "^5.16.5",

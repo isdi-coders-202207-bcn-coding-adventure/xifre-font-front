@@ -18,7 +18,7 @@ const CounterStyled = styled.ul`
       justify-content: center;
       text-align: center;
     }
-    &-item > *:first-child {
+    &-item__number {
       display: flex;
       justify-content: center;
       align-items: center;
