@@ -6,3 +6,5 @@ export const keyDate = {
   minute: fullKeyDate.getMinutes(),
   second: fullKeyDate.getSeconds(),
 };
+
+export type IKeyDate = typeof keyDate;
