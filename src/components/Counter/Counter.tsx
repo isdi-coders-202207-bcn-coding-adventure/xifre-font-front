@@ -1,16 +1,15 @@
-import { useState } from "react";
-import keyDate from "../../data/keyDate";
+import { useEffect, useState } from "react";
+import { keyDate } from "../../data/keyDate";
+import useTimer from "../hooks/useTimer";
 import CounterStyled from "./CounterStyled";
 
-const initialState = {
-  day: keyDate.getDate(),
-  hour: keyDate.getHours(),
-  minute: keyDate.getMinutes(),
-  second: keyDate.getSeconds(),
-};
-
 const Counter = (): JSX.Element => {
-  const [counter, setCounter] = useState(initialState);
+  const [counter, setCounter] = useState(keyDate);
+  const { timer } = useTimer();
+
+  useEffect(() => {
+    timer(setCounter);
+  }, [timer]);
 
   return (
     <CounterStyled>
