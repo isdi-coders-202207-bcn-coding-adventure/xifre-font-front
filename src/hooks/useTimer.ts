@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { IKeyDate, keyDate } from "../../data/keyDate";
+import { IKeyDate, keyDate } from "../data/keyDate";
 
 const useTimer = () => {
   const timer = useCallback(
