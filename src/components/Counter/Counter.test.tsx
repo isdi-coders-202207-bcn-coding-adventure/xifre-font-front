@@ -4,9 +4,16 @@ import { store } from "../../store/store";
 import Counter from "./Counter";
 
 const mockTimer = jest.fn();
+const mockSetter = jest.fn();
+// const mockUseState = jest.fn().mockReturnValue([{}, mockSetter]);
 
 jest.mock("../../hooks/useTimer", () => () => ({
   timer: mockTimer,
+}));
+
+jest.mock("react", () => ({
+  ...jest.requireActual("react"),
+  useState: () => [{}, mockSetter],
 }));
 
 describe("Given a counter component", () => {
@@ -18,7 +25,7 @@ describe("Given a counter component", () => {
         </Provider>
       );
       await waitFor(() => {
-        expect(mockTimer).toHaveBeenCalled();
+        expect(mockTimer).toHaveBeenCalledWith(mockSetter);
       });
     });
   });
