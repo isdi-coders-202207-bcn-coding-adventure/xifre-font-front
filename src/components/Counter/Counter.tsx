@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { keyDate } from "../../data/keyDate";
-import useTimer from "../hooks/useTimer";
+import useTimer from "../../hooks/useTimer";
 import CounterStyled from "./CounterStyled";
 
 const Counter = (): JSX.Element => {
