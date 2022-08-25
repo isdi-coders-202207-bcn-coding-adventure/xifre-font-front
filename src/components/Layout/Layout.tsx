@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "../Header/Header";
 import Counter from "../Counter/Counter";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 const StyledContainer = styled.div`
   margin: 0 auto;
@@ -13,7 +14,11 @@ const Layout = (): JSX.Element => {
   return (
     <StyledContainer>
       <Header />
-      <Counter />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Counter />} />
+        <Route path="/register" element={<Navigate to="/home" />} />
+      </Routes>
     </StyledContainer>
   );
 };

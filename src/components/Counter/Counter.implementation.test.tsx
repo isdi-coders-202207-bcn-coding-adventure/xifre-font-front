@@ -6,6 +6,17 @@ import Counter from "./Counter";
 
 jest.useFakeTimers();
 
+jest.mock("../../data/keyDate", () => ({
+  ...jest.requireActual("../../data/keyDate"),
+  keyDate: {
+    day: 2,
+    hour: 4,
+    minute: 10,
+    second: 9,
+  },
+  fullKeyDate: new Date(0, 0, 2, 4, 10, 9),
+}));
+
 describe("Given a counter component", () => {
   describe("When instantiated", () => {
     test("Then it should show a field for days, for hours, for minutes and for seconds", () => {
