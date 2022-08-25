@@ -1,4 +1,7 @@
-export const fullKeyDate = new Date(0, 0, 2, 20, 34, 9);
+export const calculateDate =
+  new Date("2022-08-27 08:46:51").getTime() - new Date().getTime();
+
+export const fullKeyDate = new Date(calculateDate);
 
 export const keyDate = {
   day: fullKeyDate.getDate(),

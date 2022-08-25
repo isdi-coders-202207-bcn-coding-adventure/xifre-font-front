@@ -11,25 +11,36 @@ const Counter = (): JSX.Element => {
     timer(setCounter);
   }, [timer]);
 
+  const isCounterOver =
+    counter.day === 0 &&
+    counter.hour === 0 &&
+    counter.minute === 0 &&
+    counter.second === 0;
+
   return (
-    <CounterStyled>
-      <li className="counter-item">
-        <span className="counter-item__number">{counter.day}</span>
-        <span className="counter-item__data">days</span>
-      </li>
-      <li className="counter-item">
-        <span className="counter-item__number">{counter.hour}</span>
-        <span className="counter-item__data">hours</span>
-      </li>
-      <li className="counter-item">
-        <span className="counter-item__number">{counter.minute}</span>
-        <span className="counter-item__data">minutes</span>
-      </li>
-      <li className="counter-item">
-        <span className="counter-item__number">{counter.second}</span>
-        <span className="counter-item__data">seconds</span>
-      </li>
-    </CounterStyled>
+    <>
+      {!isCounterOver && (
+        <CounterStyled>
+          <li className="counter-item">
+            <span className="counter-item__number">{counter.day}</span>
+            <span className="counter-item__data">days</span>
+          </li>
+          <li className="counter-item">
+            <span className="counter-item__number">{counter.hour}</span>
+            <span className="counter-item__data">hours</span>
+          </li>
+          <li className="counter-item">
+            <span className="counter-item__number">{counter.minute}</span>
+            <span className="counter-item__data">minutes</span>
+          </li>
+          <li className="counter-item">
+            <span className="counter-item__number">{counter.second}</span>
+            <span className="counter-item__data">seconds</span>
+          </li>
+        </CounterStyled>
+      )}
+      {isCounterOver && <></>}
+    </>
   );
 };
 export default Counter;
